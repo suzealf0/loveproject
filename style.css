@@ -1,0 +1,197 @@
+/* Estilos gerais */
+body {
+    font-family: "Georgia", serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1e7d4;  /* Cor bege suave de fundo */
+    color: #4a4a4a;  /* Cor escura para texto */
+    display: flex;
+    justify-content: center;  /* Centraliza o conteúdo na tela */
+    align-items: center;  /* Centraliza verticalmente */
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Capa do Livro */
+.capa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+    text-align: center;
+    padding: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    position: relative;
+    background-image: linear-gradient(135deg, #f3f3f3, #d9d1b7);
+}
+
+/* Imagem da capa */
+.capa-imagem img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Título e Subtítulo */
+.capa-titulo {
+    margin-top: 30px;
+    color: #6c4f3d;
+}
+
+.capa-titulo h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.capa-titulo h3 {
+    font-size: 1.5em;
+    color: #8d6742;
+    margin-top: 10px;
+}
+
+/* Botão para iniciar a leitura */
+.controle {
+    margin-top: 50px;
+}
+
+#avancarBtn {
+    padding: 15px 30px;
+    background-color: #6c4f3d;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+#avancarBtn:hover {
+    background-color: #8d6742;
+}
+
+/* Páginas do Livro */
+.pagina {
+    width: 80%;  /* Garante que a página tenha largura controlada */
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: opacity 1s ease-out, visibility 0s 1s;  /* Adicionando a transição */
+}
+
+/* Quando o livro for fechado, ele desaparece */
+.pagina.fechar {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Carrossel de imagens */
+.carrossel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.carrossel-images {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.carrossel-images img {
+    width: 70%; /* Ajuste o tamanho das imagens para 70% da largura do contêiner */
+    max-width: 400px; /* Largura máxima das imagens */
+    margin: 0 10px;
+    border-radius: 10px;
+}
+
+/* Texto de Homenagem nas páginas */
+.texto {
+    margin-top: 30px;
+    text-align: center;  /* Centraliza o título */
+    width: 90%;  /* Define que o texto ocupará 90% da largura da página */
+    max-width: 700px;  /* Limita o tamanho máximo do texto */
+    margin-left: auto;  /* Centraliza horizontalmente */
+    margin-right: auto;  /* Centraliza horizontalmente */
+}
+
+.texto h2 {
+    font-size: 2.5em;  /* Ajusta o tamanho do título */
+    color: #6c4f3d;  /* Cor do título */
+    line-height: 1.2;  /* Aumenta o espaçamento entre as linhas do título */
+    margin-bottom: 20px;  /* Espaço entre o título e o texto */
+}
+
+.texto p {
+    font-size: 1.3em;  /* Tamanho do texto do parágrafo */
+    color: #4a4a4a;  /* Cor do texto */
+    line-height: 1.6;  /* Aumenta o espaçamento entre as linhas do parágrafo */
+    text-align: justify;  /* Justifica o texto */
+    margin-top: 20px;  /* Espaço entre o parágrafo e o título */
+    max-width: 600px;  /* Limita o tamanho máximo do parágrafo */
+    margin-left: auto;
+    margin-right: auto;  /* Centraliza o texto */
+}
+
+/* Adicionando uma margem entre o texto e o carrossel */
+.carrossel {
+    margin-top: 50px;  /* Espaço entre o texto e o carrossel */
+}
+
+/* Botão de Fechar o Livro */
+#fecharBtn {
+    padding: 15px 30px;
+    background-color: #6c4f3d;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+#fecharBtn:hover {
+    background-color: #8d6742;
+}
+
+/* Estilos para a página final */
+.imagem-final img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.texto-final h2 {
+    font-size: 3em;
+    color: #6c4f3d;
+    margin-top: 30px;
+}
+
+.texto-final p {
+    font-size: 1.5em;
+    color: #4a4a4a;
+    margin-top: 20px;
+    max-width: 800px;
+}
+
+/* Música de fundo */
+audio {
+    display: none;
+}
